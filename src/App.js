@@ -5,7 +5,7 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <h1>S P Æ C E</h1>
+      <h1 className='Public Sans'>S P Æ C E</h1>
     </div>
   );
 }

@@ -13,3 +13,10 @@ code {
 }
 
 /* Added Public Sans Font Face */
+@font-face {
+  font-family: "Public Sans";
+  src: local("Public Sans"), local("PublicSans"),
+    url("./fonts/public-sans-v2/fonts/ttf/PublicSans-Black.ttf");
+  
+  font-weight: 900;
+}
