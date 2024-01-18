@@ -9,11 +9,13 @@ function App() {
   function space() {
     const text = inputText.split('');
     for (let i = 0; i < text.length; i++) {
-      if (text[i] === ' ') {
-        text[i] = '   ';
+      if (text[i] === ' ' || '\u0020') {
+        text[i] = text[i] + '\u0020' + '\u0020' + '\u0020';
+      } else {
+        text[i] = text[i] + ' ';
       }
     }
-    setOutputText(text.join(''));
+    setOutputText(text);
   }
   
   return (
