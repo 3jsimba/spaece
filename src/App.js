@@ -1,26 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-
-// Functio to add a space between each letter in each word
+import React, { useState } from 'react';
 
 function App() {
+  const [inputText, setInputText] = useState('');
+  const [outputText, setOutputText] = useState('');
+
+  // Function to add three spaces between each letter in each word
+  function space() {
+    const text = inputText.split('');
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === ' ') {
+        text[i] = '   ';
+      }
+    }
+    setOutputText(text.join(''));
+  }
+  
   return (
-    <div className="App">
-
+    <div className="app-container">
       {/* Div for the header of the application */}
-      <div className="App-header">
-        <h1 className="font-face-psBlack">S P Æ C E</h1>
-      </div>
-      
-      {/* Div for h input field were the text woudl go throuh  */}
-      <div className='textField'>
-        <input clasName = 'inputField' type='text' placeholder='W r i t e   t e x t   h e r e'></input>
-
-        {/* Insert for button */}
-        <button className='button'>s u b m i t</button>
+      <div className="app-header">
+        <h1 className="app-title">S P Æ C E</h1>
       </div>
 
+      <div className="app-content">
+        <label className="app-label">
+          <input type="text" className="app-input" value={inputText} placeholder="e n t e r   t e x t   h e r e" onChange={(e) => setInputText(e.target.value)} />
+        </label>
+        <button className="app-button" onClick={space}>
+          Manipulate Text
+        </button>
+        <div className="app-output">
+          <strong className="app-output-title">Output Text:</strong>
+          <div className="app-output-text">{outputText}</div>
+        </div>
+      </div>
     </div>
   );
 }
