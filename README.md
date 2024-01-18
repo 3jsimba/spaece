@@ -7,7 +7,10 @@ A simple web app that adds spaces into your text.
 1. Clone this repository.
 
 2. Install the requirements.
+- React.js
 
 3. Run the program.
+- `npm start`
+
 
 enjoy!
