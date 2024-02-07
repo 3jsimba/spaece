@@ -18,15 +18,13 @@ function App() {
     setOutputText(text.join(''));
   }
 
-  
   return (
     <pre>
-      <div className="app-container">
-        {/* Div for the header of the application */}
-        <div className="app-header">
+      <nav className="app-header">
           <h1 className="app-title">S P Æ C E</h1>
-        </div>
+      </nav>
 
+      <div className="app-container">
         <div className="app-content">
           <label className="app-label">
             <input type="text" className="app-input" value={inputText} placeholder="e n t e r   t e x t   h e r e" onChange={(e) => setInputText(e.target.value)} />
